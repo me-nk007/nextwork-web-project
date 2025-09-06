@@ -114,8 +114,8 @@
 
 <body>
     <div class="container">
-        <h1><i class="fa-solid fa-rocket"></i> Hello Nishant Om Kashyap!</h1>
-        <p>Welcome to my <b>NextWork Web Application</b>.</p>
+        <h1><i class="fa-solid fa-rocket"></i> Hello I am Nishant Om Kashyap!</h1>
+        <p>Welcome to my <b>Web Application</b>.</p>
         <p>This website is proudly hosted on <b>Amazon EC2</b> with a <b>CI/CD Pipeline</b> enabled using <b>Java
                 Maven</b> and AWS Developer Tools.</p>
         <p><i class="fa-solid fa-code-branch"></i> Every time I push code to GitHub, it automatically builds, tests, and
