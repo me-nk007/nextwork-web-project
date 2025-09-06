@@ -98,6 +98,8 @@
     <div class="card">
         <h1>🚀 Hello Nishant Om Kashyap!</h1>
         <p>Welcome to my <b>NextWork Web Application</b>.</p>
+        <p>If you see this line, that means your latest changes are automatically deployed into production by
+            CodePipeline!</p>
         <p>This website is proudly hosted on <b>Amazon EC2</b> with a <b>CI/CD Pipeline</b> enabled using <b>Java
                 Maven</b> and AWS Developer Tools.</p>
         <p>✅ Every time I push code to GitHub, it automatically builds, tests, and deploys here!</p>
