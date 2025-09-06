@@ -114,7 +114,7 @@
 
 <body>
     <div class="container">
-        <h1><i class="fa-solid fa-rocket"></i> Hello I am Nishant Om Kashyap!</h1>
+        <h1><i class="fa-solid fa-rocket"></i> Hello I am Nishant Kumar Karn!</h1>
         <p>Welcome to my <b>Web Application</b>.</p>
         <p>This website is proudly hosted on <b>Amazon EC2</b> with a <b>CI/CD Pipeline</b> enabled using <b>Java
                 Maven</b> and AWS Developer Tools.</p>
