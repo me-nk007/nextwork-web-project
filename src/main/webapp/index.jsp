@@ -4,131 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <title>NextWork Web Application</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
             color: #fff;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
             padding: 40px;
         }
 
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1.2s ease;
+        }
+
         h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00e6e6, #a020f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 230, 230, 0.6), 0 0 30px rgba(160, 32, 240, 0.5);
+        }
+
+        h1 i {
+            margin-right: 10px;
+            color: #00e6e6;
+            text-shadow: 0 0 15px #00e6e6;
         }
 
         p {
-            font-size: 1.1em;
-            margin: 8px 0;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
-            display: inline-block;
-            max-width: 950px;
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #e0f7fa;
         }
 
         img {
-            margin: 20px 0;
+            display: block;
+            margin: 0 auto 35px auto;
+            border-radius: 16px;
             max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 30px rgba(0, 230, 230, 0.3);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
 
-        h2 {
-            margin-top: 20px;
-            font-size: 1.6em;
+        img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 40px rgba(160, 32, 240, 0.6);
+        }
+
+        details {
+            margin: 18px 0;
+            padding: 18px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.08);
             cursor: pointer;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 230, 230, 0.2);
         }
 
-        h2:hover {
-            background: rgba(0, 0, 0, 0.35);
+        details:hover {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 230, 230, 0.3);
         }
 
-        .content {
-            display: none;
-            margin-top: 10px;
-            animation: fadeIn 0.6s ease-in-out;
+        summary {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #00e6e6;
+            display: flex;
+            align-items: center;
         }
 
-        ul {
-            text-align: left;
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        li {
-            margin: 8px 0;
+        summary i {
+            margin-right: 10px;
+            color: #a020f0;
+            text-shadow: 0 0 10px #a020f0;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(40px);
             }
 
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
-    <script>
-        function toggleSection(id) {
-            let section = document.getElementById(id);
-            section.style.display = (section.style.display === "block") ? "none" : "block";
-        }
-    </script>
 </head>
 
 <body>
-    <div class="card">
-        <h1>🚀 Hello Nishant Om Kashyap!</h1>
+    <div class="container">
+        <h1><i class="fa-solid fa-rocket"></i> Hello Nishant Om Kashyap!</h1>
         <p>Welcome to my <b>NextWork Web Application</b>.</p>
-        <p>If you see this line, that means your latest changes are automatically deployed into production by
-            CodePipeline!</p>
         <p>This website is proudly hosted on <b>Amazon EC2</b> with a <b>CI/CD Pipeline</b> enabled using <b>Java
                 Maven</b> and AWS Developer Tools.</p>
-        <p>✅ Every time I push code to GitHub, it automatically builds, tests, and deploys here!</p>
+        <p><i class="fa-solid fa-code-branch"></i> Every time I push code to GitHub, it automatically builds, tests, and
+            deploys here!</p>
 
         <img src="https://learn.nextwork.org/projects/static/aws-devops-vscode/architecture-complete.png"
-            alt="AWS Architecture Diagram">
+            alt="AWS CI/CD Architecture">
 
-        <h2 onclick="toggleSection('services')">🛠️ Architecture & AWS Services Used ⬇</h2>
-        <div id="services" class="content">
-            <ul>
-                <li><b>Amazon EC2</b>: Virtual server where my web application runs.</li>
-                <li><b>AWS CodeCommit</b>: Source code repository that stores my project.</li>
-                <li><b>AWS CodeBuild</b>: Builds the project using <b>Java Maven</b> and creates deployable artifacts.
-                </li>
-                <li><b>AWS CodeDeploy</b>: Automates deployment of new builds onto EC2.</li>
-                <li><b>AWS CodePipeline</b>: Orchestrates CI/CD process — GitHub → Build → Deploy.</li>
-                <li><b>Amazon S3</b>: Stores build artifacts (WAR files) before deployment.</li>
-                <li><b>AWS IAM</b>: Handles permissions & security for the pipeline.</li>
-                <li><b>Amazon CloudWatch</b>: Logs & metrics monitoring.</li>
-            </ul>
-        </div>
+        <details>
+            <summary><i class="fa-solid fa-diagram-project"></i> Architecture & AWS Services Used</summary>
+            <p><b>CodeArtifact</b>: Stores Maven dependencies securely.<br>
+                <b>CodeBuild</b>: Builds and packages the Java app.<br>
+                <b>CodePipeline</b>: Automates build → test → deploy.<br>
+                <b>CodeDeploy</b>: Deploys the application onto EC2.<br>
+                <b>CloudFormation</b>: Sets up infrastructure (VPC, EC2, roles).<br>
+                <b>S3 Bucket</b>: Stores build artifacts.<br>
+                <b>EC2 Instance</b>: Hosts the live web app.
+            </p>
+        </details>
 
-        <h2 onclick="toggleSection('summary')">📖 Project Summary ⬇</h2>
-        <div id="summary" class="content">
-            <p>This project demonstrates <b>Continuous Integration</b> and <b>Continuous Deployment</b> on AWS:</p>
-            <p>👉 Code pushed to GitHub triggers a pipeline → CodeBuild compiles → Artifacts stored in S3 → CodeDeploy
-                releases to EC2 → Website updates automatically.</p>
-            <p>⚡ Fully automated DevOps workflow, ensuring faster and reliable delivery!</p>
-        </div>
+        <details>
+            <summary><i class="fa-solid fa-list-check"></i> Project Summary</summary>
+            <p>This project demonstrates <b>CI/CD on AWS</b> using EC2, CodePipeline, CodeBuild, CodeDeploy, and other
+                AWS Developer Tools.
+                It ensures that whenever I push changes to GitHub, the pipeline builds, tests, and deploys
+                automatically, showing the latest updates on this website.</p>
+        </details>
     </div>
 </body>
 
